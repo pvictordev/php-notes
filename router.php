@@ -1,7 +1,5 @@
 <?php
 
-// controllers
-//did parse_url to handle the query string
 $uri = parse_url($_SERVER['REQUEST_URI'])["path"];
 
 $routes = [

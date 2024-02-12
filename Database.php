@@ -1,5 +1,4 @@
 <?php
-//connect to db
 class Database 
 {
 

@@ -1,15 +1,20 @@
 <?php
 
-$config = require('config.php');
-$db = new Database($config['database']);
+$config = require "config.php";
 
-$heading = 'Note';
-$currentUserId = 1;
+$db = new Database($config["database"]);
 
-$note = $db->query('select * from notes where id = :id', [
-    'id' => $_GET['id']
-])->findOrFail();
+$heading = "My Notes";
 
-authorize($note['user_id'] === $currentUserId);
+$id = $_GET["id"];
+$currentUser = 1;
+
+$note = $db->query("select * from notes where id = :id", 
+[
+    "id" => $id
+])->find();
+
+authorize($note["user_id"] === $currentUser);
+
 
 require "views/note.view.php";

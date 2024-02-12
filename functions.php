@@ -1,20 +1,21 @@
 <?php
 
-function dd($value)
+function dd($data)
 {
     echo "<pre>";
-    var_dump($value);
+    var_dump($data);
     echo "</pre>";
-
     die();
 }
 
-function urlIs($value) {
-    return $_SERVER['REQUEST_URI'] === $value;
+function urlIs($path)
+{
+    return $_SERVER["REQUEST_URI"] === $path;
 }
 
-function authorize($condition, $status = Response::FORBIDDEN) {
-    if (! $condition) {
+function authorize($condition, $status = Response::FORBIDDEN)
+{
+    if(! $condition) {
         abort($status);
     }
 }

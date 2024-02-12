@@ -12,7 +12,7 @@
                 </li>
             </ul>
         <?php endforeach; ?>
-        <a class="mt-6 text-blue-900 font-bold text-2xl" href="/create">Create a note</a>
+        <a class="mt-6 text-blue-900 font-bold text-2xl" href="/notes/create">Create a note</a>
     </div>
   </main>
 

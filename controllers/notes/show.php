@@ -9,12 +9,14 @@ $heading = "My Notes";
 $id = $_GET["id"];
 $currentUser = 1;
 
-$note = $db->query("select * from notes where id = :id", 
-[
-    "id" => $id
-])->find();
+$note = $db->query(
+    "select * from notes where id = :id",
+    [
+        "id" => $id
+    ]
+)->find();
 
 authorize($note["user_id"] === $currentUser);
 
 
-require "views/note.view.php";
+require "views/notes/show.view.php";

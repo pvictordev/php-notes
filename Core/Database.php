@@ -1,5 +1,6 @@
 <?php
-class Database 
+
+class Database
 {
 
     public $connection;
@@ -7,20 +8,24 @@ class Database
 
     public function __construct($config, $username = 'root', $password = '')
     {
-        $dsn = "mysql:" . http_build_query($config, "", ";");// it generates this: "host=localhost;port=3306;dbname=myapp;charset=utf8mb4" 
+        $dsn = "mysql:" . http_build_query($config, "", ";"); // it generates this: "host=localhost;port=3306;dbname=myapp;charset=utf8mb4" 
 
-        $this->connection = new PDO($dsn, $username, $password, 
-        [
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        ]);
+        $this->connection = new PDO(
+            $dsn,
+            $username,
+            $password,
+            [
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            ]
+        );
     }
 
     public function query($query, $params = [])
-    {  
+    {
         $this->statement = $this->connection->prepare($query);
         $this->statement->execute($params);
-      
-        return $this;  
+
+        return $this;
     }
 
     public function get()
@@ -34,10 +39,10 @@ class Database
         return $this->statement->fetch();
     }
 
-    public function findOrFail() 
+    public function findOrFail()
     {
         $result = $this->find();
-        if(!$result) {
+        if (!$result) {
             abort(Response::NOT_FOUND);
         }
     }

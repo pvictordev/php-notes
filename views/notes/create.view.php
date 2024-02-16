@@ -25,4 +25,4 @@
   </div>
 </main>
 
-<?php require('views/partials/footer.php'); ?>
+<?php require base_path('views/partials/footer.php'); ?>

@@ -2,6 +2,6 @@
 
 $heading = "Contact Page";
 
-view("views/contact.view.php", [
+view("contact.view.php", [
     'heading' => 'Contact Us',
 ]);

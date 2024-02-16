@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class Validator
 {
     public static function validate($value, $min = 1, $max = INF)

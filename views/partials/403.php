@@ -1,6 +1,6 @@
-<?php require('head.php'); ?>
+<?php require('./head.php'); ?>
 
-<?php require('nav.php'); ?>
+<?php require('./nav.php'); ?>
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
@@ -11,4 +11,4 @@
     </div>
 </main>
 
-<?php require('footer.php'); ?>
+<?php require('./footer.php'); ?>

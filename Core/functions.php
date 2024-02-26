@@ -13,7 +13,8 @@ function urlIs($path)
     return $_SERVER["REQUEST_URI"] === $path;
 }
 
-function authorize($condition, $status = Response::FORBIDDEN)
+// $status = Response::FORBIDDEN
+function authorize($condition, $status = 403)
 {
     if (!$condition) {
         abort($status);

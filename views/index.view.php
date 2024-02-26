@@ -10,4 +10,4 @@
   </div>
 </main>
 
-<?php require base_path('partials/footer.php'); ?>
+<?php require('partials/footer.php'); ?>

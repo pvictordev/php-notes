@@ -8,7 +8,10 @@
     <div class="p-6 mt-6 bg-white border-b border-gray-200">
       <p class="text-2xl font-bold mb-2"> <?= htmlspecialchars($note["body"]) ?></p>
     </div>
-    <p class="text-red-500">Delete</p>
+    <form class="mt-6" method="POST">
+      <input type="hidden" name="<?= $note['id'] ?>">
+      <button class="text-red-500 font-bold text-xl">Delete</button>
+    </form>
   </div>
 
 </main>

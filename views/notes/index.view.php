@@ -13,7 +13,7 @@
         </li>
       </ul>
     <?php endforeach; ?>
-    <a class="mt-6 text-blue-900 font-bold text-2xl" href="/notes/create">Create a note</a>
+    <a class="inline-flex justify-center text-center rounded-md border border-transparent bg-green-600 py-2 px-4 text-md font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"" href=" /notes/create">+ Create a note</a>
   </div>
 </main>
 

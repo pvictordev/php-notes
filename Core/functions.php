@@ -44,4 +44,16 @@ function login($user)
     $_SESSION['user'] = [
         'email' => $user['email']
     ];
+
+    session_regenerate_id(true);
+}
+
+function logout()
+{
+    // log out the user
+    $_SESSION = [];
+    session_destroy();
+
+    $params = session_get_cookie_params();
+    setcookie('PHPSESSID', '', time() - 3600, $params['domain'], $params['secure'], $params['httponly']);
 }

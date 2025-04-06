@@ -1,5 +1,10 @@
 <?php
 
+function base_path($path = '')
+{
+    return BASE_PATH . $path;
+}
+
 function dd($data)
 {
     echo "<pre>";
@@ -28,10 +33,6 @@ function authorize($condition, $status = 403)
     }
 }
 
-function base_path($path)
-{
-    return BASE_PATH . $path;
-}
 
 function view($path, $attributes = [])
 {
